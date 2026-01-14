@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Setup | AI Integration Journey</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Express Setup</span>
+            </div>
+            <p class="subtitle">AI Integration Journey</p>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item active" data-section="intro">
+                <span class="nav-indicator"></span>
+                <span class="nav-number">00</span>
+                <span class="nav-title">Введение</span>
+            </li>
+            <li class="nav-item" data-section="lifecycle">
+                <span class="nav-indicator"></span>
+                <span class="nav-number">01</span>
+                <span class="nav-title">Жизненный цикл продукта</span>
+            </li>
+            <li class="nav-item" data-section="stage2">
+                <span class="nav-indicator"></span>
+                <span class="nav-number">02</span>
+                <span class="nav-title">Tools</span>
+            </li>
+            <li class="nav-item" data-section="stage3">
+                <span class="nav-indicator"></span>
+                <span class="nav-number">03</span>
+                <span class="nav-title">Requirement Analysis</span>
+            </li>
+            <li class="nav-item nav-subitem" data-section="stage3-demo">
+                <span class="nav-indicator"></span>
+                <span class="nav-number">3.1</span>
+                <span class="nav-title">Live Demo</span>
+            </li>
+            <li class="nav-item nav-subitem" data-section="stage3-problems">
+                <span class="nav-indicator"></span>
+                <span class="nav-number">3.2</span>
+                <span class="nav-title">Problems & Limitations</span>
+            </li>
+            <li class="nav-item" data-section="stage4">
+                <span class="nav-indicator"></span>
+                <span class="nav-number">04</span>
+                <span class="nav-title">Development</span>
+            </li>
+            <li class="nav-item nav-subitem" data-section="stage4-demo">
+                <span class="nav-indicator"></span>
+                <span class="nav-number">4.1</span>
+                <span class="nav-title">Live Demo</span>
+            </li>
+            <li class="nav-item nav-subitem" data-section="stage4-problems">
+                <span class="nav-indicator"></span>
+                <span class="nav-number">4.2</span>
+                <span class="nav-title">Problems & Limitations</span>
+            </li>
+            <li class="nav-item" data-section="stage5">
+                <span class="nav-indicator"></span>
+                <span class="nav-number">05</span>
+                <span class="nav-title">Testing</span>
+            </li>
+            <li class="nav-item nav-subitem" data-section="stage5-demo">
+                <span class="nav-indicator"></span>
+                <span class="nav-number">5.1</span>
+                <span class="nav-title">Live Demo</span>
+            </li>
+            <li class="nav-item nav-subitem" data-section="stage5-problems">
+                <span class="nav-indicator"></span>
+                <span class="nav-number">5.2</span>
+                <span class="nav-title">Problems & Limitations</span>
+            </li>
+            <li class="nav-item" data-section="stage6">
+                <span class="nav-indicator"></span>
+                <span class="nav-number">06</span>
+                <span class="nav-title">Deployment</span>
+            </li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <span class="progress-text">0%</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Section 0: Introduction -->
+        <section class="slide active" id="intro">
+            <div class="slide-content">
+                <div class="hero-container">
+                    <p class="hero-eyebrow animate-fade-up">Team Presents</p>
+                    <h1 class="hero-team-name animate-fade-up delay-1">Express Setup</h1>
+                    <h2 class="hero-title animate-fade-up delay-2">
+                        Интеграция <span class="gradient-text">AI</span> в нашу команду
+                    </h2>
+                    <p class="hero-description animate-fade-up delay-3">
+                        История о том, как мы трансформировали наши процессы разработки 
+                        с помощью искусственного интеллекта
+                    </p>
+                    <div class="hero-cta animate-fade-up delay-4">
+                        <button class="btn-primary" onclick="navigateToSection('lifecycle')">
+                            Начать путешествие
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="floating-elements">
+                    <div class="floating-circle circle-1"></div>
+                    <div class="floating-circle circle-2"></div>
+                    <div class="floating-circle circle-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Product Lifecycle -->
+        <section class="slide" id="lifecycle">
+            <div class="slide-content">
+                <div class="section-header">
+                    <p class="section-eyebrow animate-fade-up">Этап 01</p>
+                    <h2 class="section-title animate-fade-up delay-1">
+                        Жизненный цикл<br><span class="gradient-text">продукта</span>
+                    </h2>
+                    <p class="section-description animate-fade-up delay-2">
+                        Каждый продукт проходит через определённые стадии развития. 
+                        Понимание этих стадий — ключ к успешной интеграции AI.
+                    </p>
+                </div>
+
+                <div class="lifecycle-container animate-fade-up delay-3">
+                    <div class="lifecycle-circle">
+                        <svg class="lifecycle-svg" viewBox="0 0 600 600">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#0071e3"/>
+                                    <stop offset="50%" style="stop-color:#a855f7"/>
+                                    <stop offset="100%" style="stop-color:#ec4899"/>
+                                </linearGradient>
+                                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto" fill="url(#gradient)">
+                                    <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+                                </marker>
+                            </defs>
+                            <!-- Main circle with gradient -->
+                            <circle class="lifecycle-main-circle" cx="300" cy="300" r="180" fill="none" stroke="url(#gradient)" stroke-width="3"/>
+                            <!-- Direction arrows on the circle -->
+                            <path class="lifecycle-arrow" d="M 300 120 A 180 180 0 0 1 468 228" fill="none" stroke="url(#gradient)" stroke-width="3" marker-end="url(#arrowhead)"/>
+                            <path class="lifecycle-arrow" d="M 468 228 A 180 180 0 0 1 420 450" fill="none" stroke="url(#gradient)" stroke-width="3" marker-end="url(#arrowhead)"/>
+                            <path class="lifecycle-arrow" d="M 420 450 A 180 180 0 0 1 180 450" fill="none" stroke="url(#gradient)" stroke-width="3" marker-end="url(#arrowhead)"/>
+                            <path class="lifecycle-arrow" d="M 180 450 A 180 180 0 0 1 132 228" fill="none" stroke="url(#gradient)" stroke-width="3" marker-end="url(#arrowhead)"/>
+                            <path class="lifecycle-arrow" d="M 132 228 A 180 180 0 0 1 300 120" fill="none" stroke="url(#gradient)" stroke-width="3" marker-end="url(#arrowhead)"/>
+                        </svg>
+                        
+                        <div class="lifecycle-center">
+                            <p class="center-text">SDLC</p>
+                        </div>
+
+                        <div class="lifecycle-stages">
+                            <!-- Stage 1: Top - Requirement Analysis -->
+                            <div class="stage" data-stage="1">
+                                <div class="stage-dot"></div>
+                                <div class="stage-content">
+                                    <span class="stage-icon">📋</span>
+                                    <h3>Requirement Analysis</h3>
+                                    <p>Сбор и анализ требований</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Stage 2: Top Right - Planning & Design -->
+                            <div class="stage" data-stage="2">
+                                <div class="stage-dot"></div>
+                                <div class="stage-content">
+                                    <span class="stage-icon">🎨</span>
+                                    <h3>Planning & Design</h3>
+                                    <p>Планирование и проектирование</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Stage 3: Bottom Right - Development -->
+                            <div class="stage" data-stage="3">
+                                <div class="stage-dot"></div>
+                                <div class="stage-content">
+                                    <span class="stage-icon">💻</span>
+                                    <h3>Development</h3>
+                                    <p>Разработка и кодирование</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Stage 4: Bottom Left - Testing -->
+                            <div class="stage" data-stage="4">
+                                <div class="stage-dot"></div>
+                                <div class="stage-content">
+                                    <span class="stage-icon">🧪</span>
+                                    <h3>Testing</h3>
+                                    <p>Тестирование и QA</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Stage 5: Top Left - Deployment -->
+                            <div class="stage" data-stage="5">
+                                <div class="stage-dot"></div>
+                                <div class="stage-content">
+                                    <span class="stage-icon">🚀</span>
+                                    <h3>Deployment</h3>
+                                    <p>Развёртывание и запуск</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Tools -->
+        <section class="slide" id="stage2">
+            <div class="slide-content">
+                <div class="section-header centered">
+                    <p class="section-eyebrow animate-fade-up">Этап 02</p>
+                    <h2 class="section-title animate-fade-up delay-1">
+                        AI <span class="gradient-text">Tools</span>
+                    </h2>
+                    <p class="section-description animate-fade-up delay-2">
+                        Инструменты искусственного интеллекта, которые мы используем в команде
+                    </p>
+                </div>
+
+                <div class="tools-grid animate-fade-up delay-3">
+                    <!-- GitHub Copilot -->
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <div class="tool-content">
+                            <h3>GitHub Copilot</h3>
+                            <p class="tool-type">AI Agent</p>
+                            <p class="tool-description">AI-помощник для написания кода прямо в редакторе. Автодополнение, генерация функций и документации.</p>
+                            <div class="tool-features">
+                                <span class="feature-tag">Code Completion</span>
+                                <span class="feature-tag">Chat</span>
+                                <span class="feature-tag">PR Review</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cursor -->
+                    <div class="tool-card">
+                        <div class="tool-icon cursor-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M5.5 2L20 12L5.5 22V2Z"/>
+                            </svg>
+                        </div>
+                        <div class="tool-content">
+                            <h3>Cursor</h3>
+                            <p class="tool-type">AI Agent / IDE</p>
+                            <p class="tool-description">AI-первый редактор кода на базе VS Code. Глубокая интеграция с LLM для редактирования и генерации кода.</p>
+                            <div class="tool-features">
+                                <span class="feature-tag">Multi-file Edit</span>
+                                <span class="feature-tag">Composer</span>
+                                <span class="feature-tag">Codebase Context</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MCP Servers -->
+                    <div class="tool-card">
+                        <div class="tool-icon mcp-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <circle cx="12" cy="4" r="2"/>
+                                <circle cx="12" cy="20" r="2"/>
+                                <circle cx="4" cy="12" r="2"/>
+                                <circle cx="20" cy="12" r="2"/>
+                                <line x1="12" y1="9" x2="12" y2="6"/>
+                                <line x1="12" y1="18" x2="12" y2="15"/>
+                                <line x1="9" y1="12" x2="6" y2="12"/>
+                                <line x1="18" y1="12" x2="15" y2="12"/>
+                            </svg>
+                        </div>
+                        <div class="tool-content">
+                            <h3>MCP Servers</h3>
+                            <p class="tool-type">Model Context Protocol</p>
+                            <p class="tool-description">Протокол для подключения AI к внешним источникам данных и инструментам. Расширяет возможности агентов.</p>
+                            <div class="tool-features">
+                                <span class="feature-tag">Database Access</span>
+                                <span class="feature-tag">API Integration</span>
+                                <span class="feature-tag">Custom Tools</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Requirement Analysis -->
+        <section class="slide" id="stage3">
+            <div class="slide-content">
+                <div class="section-header centered">
+                    <p class="section-eyebrow animate-fade-up">Этап 03</p>
+                    <h2 class="section-title animate-fade-up delay-1">
+                        Requirement <span class="gradient-text">Analysis</span>
+                    </h2>
+                    <p class="section-description animate-fade-up delay-2">
+                        Анализ требований с использованием AI инструментов
+                    </p>
+                </div>
+
+                <!-- Status Legend -->
+                <div class="status-legend-bar animate-fade-up delay-3">
+                    <div class="legend-status-item">
+                        <span class="legend-badge legend-good">GOOD</span>
+                        <span class="legend-desc">met the criteria for what we need</span>
+                    </div>
+                    <div class="legend-status-item">
+                        <span class="legend-badge legend-medium">MEDIUM</span>
+                        <span class="legend-desc">have some problems</span>
+                    </div>
+                    <div class="legend-status-item">
+                        <span class="legend-badge legend-not-implemented">NOT IMPLEMENTED</span>
+                        <span class="legend-desc">not yet implemented</span>
+                    </div>
+                    <div class="legend-status-item">
+                        <span class="legend-badge legend-bad">NOT POSSIBLE</span>
+                        <span class="legend-desc">not possible to cover with AI</span>
+                    </div>
+                </div>
+
+                <!-- Activities Table -->
+                <div class="activities-table-v2 animate-fade-up delay-4">
+                    <div class="table-row-v2" data-status="medium" style="--row-delay: 0">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">01</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Analyze Jira tickets</h4>
+                                <p>Анализ задач и требований из Jira</p>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-medium">MEDIUM</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="not-implemented" style="--row-delay: 1">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">02</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Analyze Figma</h4>
+                                <p>Анализ дизайн-макетов и UI компонентов</p>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-implemented">NOT IMPLEMENTED</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="medium" style="--row-delay: 2">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">03</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Analyze Confluence</h4>
+                                <p>Анализ документации и спецификаций</p>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-medium">MEDIUM</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="not-possible" style="--row-delay: 3">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">04</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Analyze test requirements</h4>
+                                <p>Анализ тестовых требований и критериев</p>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-possible">NOT POSSIBLE</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="medium" style="--row-delay: 4">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">05</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Analyze requirements with comparison</h4>
+                                <p>Сравнительный анализ с текущим поведением</p>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-medium">MEDIUM</span>
+                    </div>
+                </div>
+
+                </div>
+        </section>
+
+        <!-- Section 3.1: Live Demo -->
+        <section class="slide" id="stage3-demo">
+            <div class="slide-content">
+                <div class="section-header centered">
+                    <p class="section-eyebrow animate-fade-up">Этап 3.1</p>
+                    <h2 class="section-title animate-fade-up delay-1">
+                        Live <span class="gradient-text">Demo</span>
+                    </h2>
+                    <p class="section-description animate-fade-up delay-2">
+                        Демонстрация работы AI инструментов в реальном времени
+                    </p>
+                </div>
+
+                <div class="demo-container animate-fade-up delay-3">
+                    <div class="demo-card">
+                        <div class="demo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                        <h3>Requirement Analysis с AI</h3>
+                        <p>Покажем как AI помогает анализировать требования из Jira, Figma и Confluence</p>
+                        <div class="demo-badge">Interactive</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3.2: Problems & Limitations -->
+        <section class="slide" id="stage3-problems">
+            <div class="slide-content">
+                <div class="section-header centered">
+                    <p class="section-eyebrow animate-fade-up">Этап 3.2</p>
+                    <h2 class="section-title animate-fade-up delay-1">
+                        Problems & <span class="gradient-text">Limitations</span>
+                    </h2>
+                    <p class="section-description animate-fade-up delay-2">
+                        Проблемы и ограничения при анализе требований с AI
+                    </p>
+                </div>
+
+                <div class="problems-standalone animate-fade-up delay-3">
+                    <div class="problem-card-large problem-medium" style="--card-delay: 0">
+                        <div class="problem-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                            </svg>
+                        </div>
+                        <div class="problem-card-content">
+                            <h4>Analyze Jira tickets</h4>
+                            <ul class="problem-list-large">
+                                <li>Can't work with components and FixVersions in a Jira ticket</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="problem-card-large problem-medium" style="--card-delay: 1">
+                        <div class="problem-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                        <div class="problem-card-content">
+                            <h4>Analyze Confluence</h4>
+                            <ul class="problem-list-large">
+                                <li>Bad experience with Confluence, sometimes it doesn't understand the page structure</li>
+                                <li>Не работает с картинками, не понимает их</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="problem-card-large problem-critical" style="--card-delay: 2">
+                        <div class="problem-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/>
+                            </svg>
+                        </div>
+                        <div class="problem-card-content">
+                            <h4>Analyze test requirements</h4>
+                            <ul class="problem-list-large">
+                                <li>MCP doesn't work with requirements in TestIt</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Development -->
+        <section class="slide" id="stage4">
+            <div class="slide-content">
+                <div class="section-header centered">
+                    <p class="section-eyebrow animate-fade-up">Этап 04</p>
+                    <h2 class="section-title animate-fade-up delay-1">
+                        <span class="gradient-text">Development</span>
+                    </h2>
+                    <p class="section-description animate-fade-up delay-2">
+                        Разработка и автоматизация тестирования с использованием AI
+                    </p>
+                </div>
+
+                <!-- Status Legend -->
+                <div class="status-legend-bar animate-fade-up delay-3">
+                    <div class="legend-status-item">
+                        <span class="legend-badge legend-good">GOOD</span>
+                        <span class="legend-desc">met the criteria</span>
+                    </div>
+                    <div class="legend-status-item">
+                        <span class="legend-badge legend-medium">MEDIUM</span>
+                        <span class="legend-desc">have some problems</span>
+                    </div>
+                    <div class="legend-status-item">
+                        <span class="legend-badge legend-bad">NOT POSSIBLE</span>
+                        <span class="legend-desc">not possible with AI</span>
+                    </div>
+                    <div class="legend-status-item">
+                        <span class="legend-badge legend-not-need">NOT NEED</span>
+                        <span class="legend-desc">no need to use AI</span>
+                    </div>
+                </div>
+
+                <!-- Activities Table -->
+                <div class="activities-table-v2 animate-fade-up delay-4">
+                    <!-- Test case development group -->
+                    <div class="activity-group">
+                        <div class="activity-group-header">Test case development</div>
+                        
+                        <div class="table-row-v2 table-row-nested" data-status="not-possible" style="--row-delay: 0">
+                            <div class="row-indicator"></div>
+                            <div class="activity-info-v2">
+                                <div class="activity-details-v2">
+                                    <h4>Create manual cases in TestIt</h4>
+                                </div>
+                            </div>
+                            <span class="status-badge-v2 status-not-possible">NOT POSSIBLE</span>
+                        </div>
+
+                        <div class="table-row-v2 table-row-nested" data-status="medium" style="--row-delay: 1">
+                            <div class="row-indicator"></div>
+                            <div class="activity-info-v2">
+                                <div class="activity-details-v2">
+                                    <h4>Review test cases</h4>
+                                </div>
+                            </div>
+                            <span class="status-badge-v2 status-medium">MEDIUM</span>
+                        </div>
+
+                        <div class="table-row-v2 table-row-nested" data-status="good" style="--row-delay: 2">
+                            <div class="row-indicator"></div>
+                            <div class="activity-info-v2">
+                                <div class="activity-details-v2">
+                                    <h4>Transform usual cases to BDD in Nova-next-generation</h4>
+                                </div>
+                            </div>
+                            <span class="status-badge-v2 status-good">GOOD</span>
+                        </div>
+                    </div>
+
+                    <!-- Single activities -->
+                    <div class="table-row-v2" data-status="not-implemented" style="--row-delay: 3">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">02</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Checklist development</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-implemented">NOT IMPLEMENTED</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="good" style="--row-delay: 4">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">03</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Automation case development</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-good">GOOD</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="not-possible" style="--row-delay: 5">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">04</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Test plan creation test</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-possible">NOT POSSIBLE</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="not-implemented" style="--row-delay: 6">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">05</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Impact analysis</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-implemented">NOT IMPLEMENTED</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="good" style="--row-delay: 7">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">06</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Unit tests</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-good">GOOD</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="not-possible" style="--row-delay: 8">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">07</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Update the traceability matrix</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-possible">NOT POSSIBLE</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="not-need" style="--row-delay: 9">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">08</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>DevOps automation process</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-need">NOT NEED</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4.1: Live Demo -->
+        <section class="slide" id="stage4-demo">
+            <div class="slide-content">
+                <div class="section-header centered">
+                    <p class="section-eyebrow animate-fade-up">Этап 4.1</p>
+                    <h2 class="section-title animate-fade-up delay-1">
+                        Live <span class="gradient-text">Demo</span>
+                    </h2>
+                    <p class="section-description animate-fade-up delay-2">
+                        Демонстрация AI в процессе разработки
+                    </p>
+                </div>
+
+                <div class="demo-container animate-fade-up delay-3">
+                    <div class="demo-card">
+                        <div class="demo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                        <h3>Development с AI</h3>
+                        <p>Покажем как AI помогает в разработке тестов и автоматизации</p>
+                        <div class="demo-badge">Interactive</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4.2: Problems & Limitations -->
+        <section class="slide" id="stage4-problems">
+            <div class="slide-content">
+                <div class="section-header centered">
+                    <p class="section-eyebrow animate-fade-up">Этап 4.2</p>
+                    <h2 class="section-title animate-fade-up delay-1">
+                        Problems & <span class="gradient-text">Limitations</span>
+                    </h2>
+                    <p class="section-description animate-fade-up delay-2">
+                        Проблемы и ограничения на этапе Development
+                    </p>
+                </div>
+
+                <div class="problems-standalone animate-fade-up delay-3">
+                    <div class="problem-card-large problem-critical" style="--card-delay: 0">
+                        <div class="problem-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                            </svg>
+                        </div>
+                        <div class="problem-card-content">
+                            <h4>Create manual cases in TestIt</h4>
+                            <ul class="problem-list-large">
+                                <li>MCP doesn't support TestIt integration for creating cases</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="problem-card-large problem-medium" style="--card-delay: 1">
+                        <div class="problem-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                        </div>
+                        <div class="problem-card-content">
+                            <h4>Review test cases</h4>
+                            <ul class="problem-list-large">
+                                <li>Limited context understanding for complex test scenarios</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="problem-card-large problem-critical" style="--card-delay: 2">
+                        <div class="problem-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+                            </svg>
+                        </div>
+                        <div class="problem-card-content">
+                            <h4>Update the traceability matrix</h4>
+                            <ul class="problem-list-large">
+                                <li>No integration with traceability tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Testing -->
+        <section class="slide" id="stage5">
+            <div class="slide-content">
+                <div class="section-header centered">
+                    <p class="section-eyebrow animate-fade-up">Этап 05</p>
+                    <h2 class="section-title animate-fade-up delay-1">
+                        <span class="gradient-text">Testing</span>
+                    </h2>
+                    <p class="section-description animate-fade-up delay-2">
+                        Тестирование и контроль качества с использованием AI
+                    </p>
+                </div>
+
+                <!-- Status Legend -->
+                <div class="status-legend-bar animate-fade-up delay-3">
+                    <div class="legend-status-item">
+                        <span class="legend-badge legend-medium">MEDIUM</span>
+                        <span class="legend-desc">have some problems</span>
+                    </div>
+                    <div class="legend-status-item">
+                        <span class="legend-badge legend-not-implemented">NOT IMPLEMENTED</span>
+                        <span class="legend-desc">not yet implemented</span>
+                    </div>
+                    <div class="legend-status-item">
+                        <span class="legend-badge legend-not-need">NOT NEED</span>
+                        <span class="legend-desc">no need to use AI</span>
+                    </div>
+                </div>
+
+                <!-- Activities Table -->
+                <div class="activities-table-v2 animate-fade-up delay-4">
+                    <div class="table-row-v2" data-status="not-need" style="--row-delay: 0">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">01</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Defect tracking and reporting</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-need">NOT NEED</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="medium" style="--row-delay: 1">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">02</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Bug verification</h4>
+                                <p>Provide test suggestions based on Jira ticket and project structure</p>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-medium">MEDIUM</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="not-need" style="--row-delay: 2">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">03</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                                    <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Run manual tests</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-need">NOT NEED</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="not-need" style="--row-delay: 3">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">04</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Run automation tests</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-need">NOT NEED</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="not-implemented" style="--row-delay: 4">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">05</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Check that everything is ready to merge</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-implemented">NOT IMPLEMENTED</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="not-implemented" style="--row-delay: 5">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">06</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Merge and commit review</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-implemented">NOT IMPLEMENTED</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="not-need" style="--row-delay: 6">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">07</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Reports generation</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-need">NOT NEED</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="medium" style="--row-delay: 7">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">08</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Support automation runs</h4>
+                                <p>Analyze failures and warnings via Beats MCP. Provide a summary and a list of needed fixes</p>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-medium">MEDIUM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5.1: Live Demo -->
+        <section class="slide" id="stage5-demo">
+            <div class="slide-content">
+                <div class="section-header centered">
+                    <p class="section-eyebrow animate-fade-up">Этап 5.1</p>
+                    <h2 class="section-title animate-fade-up delay-1">
+                        Live <span class="gradient-text">Demo</span>
+                    </h2>
+                    <p class="section-description animate-fade-up delay-2">
+                        Демонстрация AI в процессе тестирования
+                    </p>
+                </div>
+
+                <div class="demo-container animate-fade-up delay-3">
+                    <div class="demo-card">
+                        <div class="demo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                        <h3>Testing с AI</h3>
+                        <p>Покажем как AI помогает в верификации багов и анализе результатов тестов</p>
+                        <div class="demo-badge">Interactive</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5.2: Problems & Limitations -->
+        <section class="slide" id="stage5-problems">
+            <div class="slide-content">
+                <div class="section-header centered">
+                    <p class="section-eyebrow animate-fade-up">Этап 5.2</p>
+                    <h2 class="section-title animate-fade-up delay-1">
+                        Problems & <span class="gradient-text">Limitations</span>
+                    </h2>
+                    <p class="section-description animate-fade-up delay-2">
+                        Проблемы и ограничения на этапе Testing
+                    </p>
+                </div>
+
+                <div class="problems-standalone animate-fade-up delay-3">
+                    <div class="problem-card-large problem-medium" style="--card-delay: 0">
+                        <div class="problem-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <div class="problem-card-content">
+                            <h4>Bug verification</h4>
+                            <ul class="problem-list-large">
+                                <li>Limited understanding of complex project structures</li>
+                                <li>May miss edge cases in test suggestions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="problem-card-large problem-medium" style="--card-delay: 1">
+                        <div class="problem-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                            </svg>
+                        </div>
+                        <div class="problem-card-content">
+                            <h4>Support automation runs</h4>
+                            <ul class="problem-list-large">
+                                <li>Beats MCP integration requires specific configuration</li>
+                                <li>Analysis accuracy depends on log quality</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Deployment -->
+        <section class="slide" id="stage6">
+            <div class="slide-content">
+                <div class="section-header centered">
+                    <p class="section-eyebrow animate-fade-up">Этап 06</p>
+                    <h2 class="section-title animate-fade-up delay-1">
+                        <span class="gradient-text">Deployment</span>
+                    </h2>
+                    <p class="section-description animate-fade-up delay-2">
+                        Развёртывание и релиз продукта
+                    </p>
+                </div>
+
+                <!-- Status Legend -->
+                <div class="status-legend-bar status-legend-simple animate-fade-up delay-3">
+                    <div class="legend-status-item">
+                        <span class="legend-badge legend-not-need">NOT NEED</span>
+                        <span class="legend-desc">no need to use AI for these activities</span>
+                    </div>
+                </div>
+
+                <!-- Activities Table -->
+                <div class="activities-table-v2 animate-fade-up delay-4">
+                    <div class="table-row-v2" data-status="not-need" style="--row-delay: 0">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">01</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Tags preparation</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-need">NOT NEED</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="not-need" style="--row-delay: 1">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">02</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>CMR preparation</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-need">NOT NEED</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="not-need" style="--row-delay: 2">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">03</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>RN preparations</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-need">NOT NEED</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="not-need" style="--row-delay: 3">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">04</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Roll out tags to UATs/Prod envs</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-need">NOT NEED</span>
+                    </div>
+
+                    <div class="table-row-v2" data-status="not-need" style="--row-delay: 4">
+                        <div class="row-indicator"></div>
+                        <span class="row-number">05</span>
+                        <div class="activity-info-v2">
+                            <div class="activity-icon-v2">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                                </svg>
+                            </div>
+                            <div class="activity-details-v2">
+                                <h4>Acceptance testing</h4>
+                            </div>
+                        </div>
+                        <span class="status-badge-v2 status-not-need">NOT NEED</span>
+                    </div>
+                </div>
+
+                <!-- Info Card -->
+                <div class="info-card animate-fade-up delay-5">
+                    <div class="info-card-icon">ℹ️</div>
+                    <p>На этапе Deployment все активности выполняются вручную или через существующие DevOps инструменты. AI не требуется.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Navigation Arrows -->
+    <div class="nav-arrows">
+        <button class="nav-arrow prev" onclick="navigatePrev()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15,18 9,12 15,6"></polyline>
+            </svg>
+        </button>
+        <button class="nav-arrow next" onclick="navigateNext()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9,18 15,12 9,6"></polyline>
+            </svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
